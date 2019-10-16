@@ -1,10 +1,10 @@
 ﻿function Get-usbCounter {
 
-    $usbDevciesCounter = @()
+    $usbDevCounter = @()
 
-    gwmi win32_usbdevice | % {$usbDevciesCounter += 1}
+    gwmi win32_usbdevice | % {$usbDevCounter += 1}
 
-    $activeUsbDevices = @($usbDevciesCounter).length
+    $activeUsbDevices = @($usbDevCounter).length
 
     return $activeUsbDevices
 
